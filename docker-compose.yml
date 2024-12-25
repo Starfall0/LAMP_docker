@@ -1,0 +1,39 @@
+services:
+  web:
+    container_name: php-apache
+    image: my-crud-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./www:/var/www/html/
+    ports:
+      - "8081:80"
+    environment:
+      - LANG=en_US.utf8
+    depends_on:
+      - db
+
+  db:
+    container_name: db
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: myDB
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d # Mount the init scripts
+    ports:
+      - "9906:3306"
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
