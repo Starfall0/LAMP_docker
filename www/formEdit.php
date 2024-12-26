@@ -50,7 +50,7 @@ if(isset($_GET['id'])){
         <div class="row justify-content-center">
             <div class="col-sm-8 col-md-6 col-lg-5 form-container">
                 <h3 class="text-center">Edit Member Data</h3>
-                <form action="saveedit.php" method="post">
+                <form action="saveEdit.php" method="post">
                     <div class="form-group">
                         <label for="id">ID:</label>
                         <input type="number" id="id" name="id" class="form-control" readonly value="<?php echo $row['id'];?>" required>
