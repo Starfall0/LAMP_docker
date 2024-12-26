@@ -1,6 +1,6 @@
 # Simple CRUD Application Using LAMP Stack
 
-This is a simple CRUD (Create, Read, Update, Delete) application built using the LAMP stack: **Linux (Ubuntu), Apache, MySQL, and PHP**. The project is designed to demonstrate basic CRUD functionality for managing records in a database.
+This is a simple CRUD (Create, Read, Update, Delete) application built using the LAMP stack: **Linux (debian), Apache, MySQL, and PHP**. The project is designed to demonstrate basic CRUD functionality for managing records in a database.
 
 ---
 
